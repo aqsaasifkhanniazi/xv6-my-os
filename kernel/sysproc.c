@@ -110,3 +110,15 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+uint64
+sys_proccount(void)
+{
+  int count = 0;
+  struct proc *p;
+  extern struct proc proc[NPROC];
+  for(p = proc; p < &proc[NPROC]; p++){
+    if(p->state != UNUSED)
+      count++;
+  }
+  return count;
+}

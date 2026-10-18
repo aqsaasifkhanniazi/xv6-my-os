@@ -93,6 +93,7 @@ extern uint64 sys_chdir(void);
 extern uint64 sys_dup(void);
 extern uint64 sys_getpid(void);
 extern uint64 sys_sbrk(void);
+extern uint64 sys_proccount(void);
 extern uint64 sys_pause(void);
 extern uint64 sys_uptime(void);
 extern uint64 sys_open(void);
@@ -120,6 +121,7 @@ static uint64 (*syscalls[])(void) = {
   [SYS_dup]     = sys_dup,
   [SYS_getpid]  = sys_getpid,
   [SYS_sbrk]    = sys_sbrk,
+  [SYS_proccount] = sys_proccount,
   [SYS_pause]   = sys_pause,
   [SYS_uptime]  = sys_uptime,
   [SYS_open]    = sys_open,
