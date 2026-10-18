@@ -14,7 +14,13 @@ main()
     consoleinit();
     printkinit();
     printk("\n");
-    printk("xv6 kernel is booting\n");
+    printk("\n");
+    printk("========================================\n");
+    printk(" Customized xv6-riscv Kernel \n");
+    printk(" By: Aqsa Asif Khan Niazi \n");
+    printk(" OS + Arch Extensions Enabled \n");
+    printk("========================================\n");
+    printk("\n");
     printk("\n");
     kinit();            // physical page allocator
     kvminit();          // create kernel page table
