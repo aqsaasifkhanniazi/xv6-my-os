@@ -122,3 +122,8 @@ sys_proccount(void)
   }
   return count;
 }
+uint64
+sys_getppid(void)
+{
+  return myproc()->parent->pid;
+}
