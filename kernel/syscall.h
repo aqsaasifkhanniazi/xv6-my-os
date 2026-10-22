@@ -25,3 +25,5 @@
 #define SYS_getppid  23
 #define SYS_freemem  23
 #define SYS_usedmem  24
+#define SYS_freeblocks  24
+#define SYS_usedblocks  25

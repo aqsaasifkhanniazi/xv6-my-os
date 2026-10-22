@@ -15,7 +15,20 @@
 #include "sleeplock.h"
 #include "file.h"
 #include "fcntl.h"
+extern uint64 freeblocks(void);
+extern uint64 usedblocks(void);
 
+uint64
+sys_freeblocks(void)
+{
+  return freeblocks();
+}
+
+uint64
+sys_usedblocks(void)
+{
+  return usedblocks();
+}
 // Fetch the nth word-sized system call argument as a file descriptor
 // and return both the descriptor and the corresponding struct file.
 static int

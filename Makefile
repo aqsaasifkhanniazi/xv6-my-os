@@ -153,6 +153,7 @@ $U/_proccount\
 	$U/_trapstat\
 	$U/_pagetable\
 	$U/_meminfo\
+       $U/_diskinfo\
 	$U/_calc\
 	$U/_crypt\
 	$U/_trace\

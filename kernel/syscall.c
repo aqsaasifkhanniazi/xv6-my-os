@@ -107,7 +107,9 @@ extern uint64 sys_close(void);
 extern uint64 sys_sync(void);
 extern uint64 sys_freemem(void);
 extern uint64 sys_usedmem(void);
-// An array mapping syscall numbers from syscall.h
+
+extern uint64 sys_freeblocks(void);
+extern uint64 sys_usedblocks(void);// An array mapping syscall numbers from syscall.h
 // to the function that handles the system call.
 static uint64 (*syscalls[])(void) = {
   // clang-format off
@@ -137,6 +139,8 @@ static uint64 (*syscalls[])(void) = {
   [SYS_sync]    = sys_sync,
   [SYS_freemem] =  sys_freemem,
   [SYS_usedmem]  = sys_usedmem,
+  [SYS_freeblocks] = sys_freeblocks,
+  [SYS_usedblocks] = sys_usedblocks,
   // clang-format on
 };
 

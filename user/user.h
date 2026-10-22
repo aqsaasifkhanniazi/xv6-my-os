@@ -52,3 +52,5 @@ int proccount(void);
 int getppid(void);
 uint64 freemem(void);
 uint64 usedmem(void);
+uint64 freeblocks(void);
+uint64 usedblocks(void);

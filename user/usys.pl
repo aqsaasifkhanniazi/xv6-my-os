@@ -47,3 +47,5 @@ entry("proccount");
 entry("getppid");
 entry("freemem");
 entry("usedmem");
+entry("freeblocks");
+entry("usedblocks");

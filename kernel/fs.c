@@ -60,6 +60,29 @@ bzero(int dev, int bno)
   brelse(bp);
 }
 
+uint64
+freeblocks(void)
+{
+  struct buf *bp;
+  int free = 0;
+  for(int b = 0; b < sb.nblocks; b += BPB){
+    bp = bread(1, BBLOCK(b, sb));
+    for(int bi = 0; bi < BPB && b + bi < sb.nblocks; bi++){
+      int m = 1 << (bi % 8);
+      if((bp->data[bi/8] & m) == 0){
+        free++;
+      }
+    }
+    brelse(bp);
+  }
+  return free;
+}
+
+uint64
+usedblocks(void)
+{
+  return sb.nblocks - freeblocks();
+}
 // Blocks.
 
 // Allocate a zeroed disk block.
