@@ -50,3 +50,5 @@ void *malloc(uint);
 void free(void *);
 int proccount(void);
 int getppid(void);
+uint64 freemem(void);
+uint64 usedmem(void);

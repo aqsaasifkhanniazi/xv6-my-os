@@ -127,3 +127,14 @@ sys_getppid(void)
 {
   return myproc()->parent->pid;
 }
+uint64
+sys_freemem(void)
+{
+  return freemem();
+}
+
+uint64
+sys_usedmem(void)
+{
+  return usedmem();
+}

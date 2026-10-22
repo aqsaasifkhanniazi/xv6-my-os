@@ -23,3 +23,5 @@
 #define SYS_sync   22
 #define SYS_proccount  23
 #define SYS_getppid  23
+#define SYS_freemem  23
+#define SYS_usedmem  24

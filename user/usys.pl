@@ -45,3 +45,5 @@ entry("uptime");
 entry("sync");
 entry("proccount");
 entry("getppid");
+entry("freemem");
+entry("usedmem");

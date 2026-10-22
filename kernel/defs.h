@@ -60,7 +60,8 @@ void            ireclaim(int);
 void*           kalloc(void);
 void            kfree(void *);
 void            kinit(void);
-
+uint64          freemem(void);
+uint64          usedmem(void);
 // log.c
 void            initlog(int, struct superblock*);
 void            log_write(struct buf*);
