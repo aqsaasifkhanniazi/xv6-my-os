@@ -22,8 +22,13 @@
 #define SYS_close  21
 #define SYS_sync   22
 #define SYS_proccount  23
-#define SYS_getppid  23
-#define SYS_freemem  23
-#define SYS_usedmem  24
-#define SYS_freeblocks  24
-#define SYS_usedblocks  25
+#define SYS_getppid  24
+#define SYS_freemem  25
+#define SYS_usedmem  26
+#define SYS_freeblocks  27
+#define SYS_usedblocks  28
+#define SYS_bootinfo   29
+#define SYS_trapstat   30
+#define SYS_pagetable  31
+#define SYS_rdcycle    32
+

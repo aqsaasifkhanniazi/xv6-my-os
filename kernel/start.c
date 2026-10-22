@@ -23,6 +23,8 @@ start()
   // set M Exception Program Counter to main, for mret.
   // requires gcc -mcmodel=medany
   w_mepc((uint64)main);
+asm volatile("csrw mcounteren, %0" :: "r"(0x7));
+  asm volatile("csrw scounteren, %0" :: "r"(0x7));
 
   // disable paging for now.
   w_satp(0);

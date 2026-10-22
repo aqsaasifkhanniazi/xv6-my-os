@@ -164,8 +164,10 @@ $U/_proccount\
 	$U/_dorphan\
 	$U/_sync\
         $U/_hello\
-       $U/_getppid
-fs.img: mkfs/mkfs README $(UPROGS)
+	$U/_getppid\
+	$U/_cycle
+
+fs.img: mkfs/mkfs fs.img README $(UPROGS)
 	mkfs/mkfs fs.img README $(UPROGS)
 
 -include kernel/*.d user/*.d

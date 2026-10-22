@@ -54,3 +54,4 @@ uint64 freemem(void);
 uint64 usedmem(void);
 uint64 freeblocks(void);
 uint64 usedblocks(void);
+uint64 rdcycle(void);

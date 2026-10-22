@@ -138,3 +138,10 @@ sys_usedmem(void)
 {
   return usedmem();
 }
+uint64
+sys_rdcycle(void)
+{
+  uint64 x;
+  asm volatile("rdcycle %0" : "=r" (x));
+  return x;
+}
