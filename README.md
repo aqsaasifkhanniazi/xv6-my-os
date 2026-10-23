@@ -1,25 +1,10 @@
 # Customized xv6-riscv Kernel
 
-This project contains 10 modules: 5 Operating System modules and 5 Computer Architecture modules.
+> Operating System + Architecture Project proposal 
+> Student: Aqsa Laraib
+> Roll No: BCS-F24-E19
+> Base Kernel: MIT xv6-riscv kernel
 
-## Module Architecture Diagram
-
-```mermaid
-flowchart TD
-    A[Customized xv6] --> B[Operating System]
-    A --> C[Computer Architecture]
-    B --> B1[01. Custom Banner]
-    B --> B2[02. proccount]
-    B --> B3[03. hello getppid proccount]
-    B --> B4[04. meminfo]
-    B --> B5[05. diskinfo]
-    C --> C1[06. rdcycle]
-    C --> C2[07. rdinstret]
-    C --> C3[08. CUSTOM rdtime]
-    C --> C4[09. SATP Reader]
-    C --> C5[10. Stack Inspector]
-    B1 & B2 & B3 & B4 & B5 & C1 & C2 & C3 & C4 & C5 --> D[Core xv6 Kernel]
-```
 
 ## Project Overview
 This project extends MIT xv6-riscv with 10 custom educational modules integrated in `final.c` on `riscv` branch for OS and Architecture learning.
@@ -27,7 +12,7 @@ This project extends MIT xv6-riscv with 10 custom educational modules integrated
 ### Part A: OS Modules
 
 ## **01. Custom Banner**
-Displays customized OS name "Aqsa Asif Khan Niazi" at kernel boot time.
+Displays customized OS name "Aqsa" at kernel boot time.
 Implemented in `kernel/main.c` with modified `printf` before `kvminit`.
 
 ## **02. proccount**
@@ -67,5 +52,27 @@ Explains virtual memory translation and RISC-V privileged architecture.
 ## **10. Stack Inspector**
 Inspects stack pointers `sp`, `fp`, `ra`, `gp` and trapframe layout.
 Reveals kernel stack usage and function call chain for debugging.
+
+# Customized xv6-riscv Kernel
+
+This project contains 10 modules: 5 Operating System modules and 5 Computer Architecture modules.
+
+## Module Architecture Diagram
+
+```mermaid
+flowchart TD
+    A[Customized xv6] --> B[Operating System]
+    A --> C[Computer Architecture]
+    B --> B1[01. Custom Banner]
+    B --> B2[02. proccount]
+    B --> B3[03. hello getppid proccount]
+    B --> B4[04. meminfo]
+    B --> B5[05. diskinfo]
+    C --> C1[06. rdcycle]
+    C --> C2[07. rdinstret]
+    C --> C3[08. CUSTOM rdtime]
+    C --> C4[09. SATP Reader]
+    C --> C5[10. Stack Inspector]
+    B1 & B2 & B3 & B4 & B5 & C1 & C2 & C3 & C4 & C5 --> D[Core xv6 Kernel]
 
 ## **Branch: riscv | File: final.c | All 10 Modules Integrated & Tested**
