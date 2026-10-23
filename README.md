@@ -1,9 +1,15 @@
 ## Customized xv6-riscv Kernel
 
 > **Course Project:** Operating Systems + Computer Architecture
-> **Student:** Aqsa Laraib | **Roll No:** BCS-F24-E19
-> **University:** University of Mianwali 
+> 
+> **Student:** Aqsa Laraib
+> 
+> **Roll No:** BCS-F24-E19
+> 
+> **University:** University of Mianwali
+> 
 > **Base Reference:** MIT xv6-riscv Educational Kernel
+> 
 > **Customization:** 10 New Modules Added in `final.c`
 
 
@@ -56,10 +62,8 @@ Explains virtual memory translation and RISC-V privileged architecture.
 Inspects stack pointers `sp`, `fp`, `ra`, `gp` and trapframe layout.
 Reveals kernel stack usage and function call chain for debugging.
 
-# Customized xv6-riscv Kernel
-
+## **Module Architecture Diagram**
 This project contains 10 modules: 5 Operating System modules and 5 Computer Architecture modules.
-## Module Architecture Diagram
 
 ```mermaid
 flowchart TD
