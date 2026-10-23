@@ -1,16 +1,15 @@
-hi# Customized xv6-riscv Kernel
+## Customized xv6-riscv Kernel
 
-> Operating System + Architecture Project proposal
-> 
-> Student: Aqsa Laraib
-> 
-> Roll No: BCS-F24-E19
-> 
-> Base Kernel: MIT xv6-riscv kernel
+> **Course Project:** Operating Systems + Computer Architecture
+> **Student:** Aqsa Laraib | **Roll No:** BCS-F24-E19
+> **University:** University of Mianwali 
+> **Base Reference:** MIT xv6-riscv Educational Kernel
+> **Customization:** 10 New Modules Added in `final.c`
 
 
 ## Project Overview
 This project extends MIT xv6-riscv with 10 custom modules to learn syscalls, memory management and RISC-V registers. All modules are integrated in `final.c` on `riscv` branch.
+
 The purpose is to understand how OS and Computer Architecture work together in xv6-riscv practically.
 
 ### Part A: OS Modules
