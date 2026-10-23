@@ -11,8 +11,6 @@
 
 ## Project Overview
 This project extends MIT xv6-riscv with 10 custom modules to learn syscalls, memory management and RISC-V registers. All modules are integrated in `final.c` on `riscv` branch.
-
-## Purpose of This Project
 The purpose is to understand how OS and Computer Architecture work together in xv6-riscv practically.
 
 ### Part A: OS Modules
@@ -62,10 +60,9 @@ Reveals kernel stack usage and function call chain for debugging.
 # Customized xv6-riscv Kernel
 
 This project contains 10 modules: 5 Operating System modules and 5 Computer Architecture modules.
-```
 ## Module Architecture Diagram
-
-```mermaid
+```
+mermaid
 flowchart TD
     A[Customized xv6] --> B[Operating System]
     A --> C[Computer Architecture]
