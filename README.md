@@ -20,42 +20,52 @@ flowchart TD
     C --> C5[10. Stack Inspector]
     B1 & B2 & B3 & B4 & B5 & C1 & C2 & C3 & C4 & C5 --> D[Core xv6 Kernel]
 ```
-## Project Overview
 
-This project extends the MIT xv6-riscv teaching operating system with 10 educational modules. All modules are integrated into final.c on riscv branch.
+## Project Overview
+This project extends MIT xv6-riscv with 10 custom educational modules integrated in `final.c` on `riscv` branch for OS and Architecture learning.
 
 ### Part A: OS Modules
 
-*01. Custom Banner* 
-Shows OS name and Aqsa Asif Khan Niazi at boot. Implemented in kernel/main.c.
+**01. Custom Banner**
+Displays customized OS name "Aqsa Asif Khan Niazi" at kernel boot time.
+Implemented in `kernel/main.c` with modified `printf` before `kvminit`.
 
-*02. proccount*
-Counts total active processes from process table. Returns count to user space.
+**02. proccount**
+Counts all active processes by scanning process table state `UNUSED` vs used.
+Returns total process count from kernel to user space via syscall.
 
-*03. hello, getppid, proccount*
-Three syscalls in one program. Greeting, parent PID and total processes.
+**03. hello, getppid, proccount**
+Implements three syscalls: greeting message, parent PID finder, and process counter.
+All integrated in one user program to demonstrate syscall handling.
 
-*04. meminfo*
-Displays total, free and used physical memory. Reads info from kalloc.c.
+**04. meminfo**
+Reports total physical memory, free pages and used memory in KB.
+Reads free page list from `kernel/kalloc.c` using `kalloc` freelist.
 
-*05. diskinfo*
-Displays disk size, used and free blocks. Final OS module for storage.
+**05. diskinfo**
+Shows disk size, free blocks and used blocks from virtio disk driver.
+Fetches superblock info via `fs.c` to calculate storage utilization.
 
 ### Part B: Architecture Modules
 
-*06. rdcycle*
-Reads RISC-V cycle CSR using assembly. Measures CPU cycles for performance.
+**06. rdcycle**
+Reads RISC-V `cycle` CSR via inline assembly `csrr` instruction.
+Measures exact CPU cycles for high-precision performance benchmarking.
 
-*07. rdinstret*
-Reads instruction retired CSR. Counts total instructions for CPI analysis.
+**07. rdinstret**
+Reads `instret` CSR to count retired instructions executed by CPU.
+Used for CPI (Cycles Per Instruction) calculation and analysis.
 
-*08. CUSTOM rdtime*
-Custom time CSR reader with unique logic. Different from sstatus, sepc, stvec.
+**08. CUSTOM rdtime**
+Custom implementation of `time` CSR with unique logic different from standard CSRs.
+Not using `sstatus/sepc/stvec`, shows original time handling concept.
 
-*09. SATP Reader*
-Reads SATP register for Sv39 paging. Shows root page table and ASID.
+**09. SATP Reader**
+Reads `satp` CSR to decode Sv39 paging mode, ASID and root page table PPN.
+Explains virtual memory translation and RISC-V privileged architecture.
 
-*10. Stack Inspector*
-Inspects stack registers sp, fp, ra, gp. Shows trap frame and stack layout.
+**10. Stack Inspector**
+Inspects stack pointers `sp`, `fp`, `ra`, `gp` and trapframe layout.
+Reveals kernel stack usage and function call chain for debugging.
 
-*Branch: riscv | File: final.c | All 10 Modules Integrated - Verified*
+**Branch: riscv | File: final.c | All 10 Modules Integrated & Tested**
