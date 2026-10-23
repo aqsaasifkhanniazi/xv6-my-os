@@ -1,7 +1,5 @@
 # Customized xv6-riscv Kernel
 
-This project contains 10 modules: 5 Operating System modules and 5 Computer Architecture modules.
-
 ## Module Architecture Diagram
 
 ```mermaid
@@ -26,11 +24,12 @@ This project extends MIT xv6-riscv with 10 custom educational modules integrated
 
 ### Part A: OS Modules
 
-**01. Custom Banner**
+**01. Custom Banner**```
 Displays customized OS name "Aqsa Asif Khan Niazi" at kernel boot time.
 Implemented in `kernel/main.c` with modified `printf` before `kvminit`.
 
 **02. proccount**
+```
 Counts all active processes by scanning process table state `UNUSED` vs used.
 Returns total process count from kernel to user space via syscall.
 
