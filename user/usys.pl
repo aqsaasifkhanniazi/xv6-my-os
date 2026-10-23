@@ -50,3 +50,4 @@ entry("usedmem");
 entry("freeblocks");
 entry("usedblocks");
 entry("rdcycle");
+entry("rdinstret");

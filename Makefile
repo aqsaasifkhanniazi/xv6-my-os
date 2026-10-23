@@ -165,7 +165,8 @@ $U/_proccount\
 	$U/_sync\
         $U/_hello\
 	$U/_getppid\
-	$U/_cycle
+	$U/_cycle\
+	$U/_inscount\
 
 fs.img: mkfs/mkfs fs.img README $(UPROGS)
 	mkfs/mkfs fs.img README $(UPROGS)

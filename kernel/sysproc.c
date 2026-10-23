@@ -145,3 +145,10 @@ sys_rdcycle(void)
   asm volatile("rdcycle %0" : "=r" (x));
   return x;
 }
+uint64
+sys_rdinstret(void)
+{
+  uint64 x;
+  asm volatile("rdinstret %0" : "=r" (x));
+  return x;
+}

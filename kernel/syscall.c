@@ -110,7 +110,7 @@ extern uint64 sys_usedmem(void);
 
 extern uint64 sys_freeblocks(void);
 extern uint64 sys_usedblocks(void);
-
+extern uint64 sys_rdinstret(void);
 extern uint64 sys_rdcycle(void);
 // An array mapping syscall numbers from syscall.h
 // to the function that handles the system call.
@@ -144,8 +144,9 @@ static uint64 (*syscalls[])(void) = {
   [SYS_usedmem]  = sys_usedmem,
   [SYS_freeblocks] = sys_freeblocks,
   [SYS_usedblocks] = sys_usedblocks,
-
+  [SYS_rdinstret] sys_rdinstret,
    [SYS_rdcycle] sys_rdcycle,
+
   // clang-format on
 };
 

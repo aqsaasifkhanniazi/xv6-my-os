@@ -31,4 +31,4 @@
 #define SYS_trapstat   30
 #define SYS_pagetable  31
 #define SYS_rdcycle    32
-
+#define SYS_rdinstret 33
