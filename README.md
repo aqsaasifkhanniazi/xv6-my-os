@@ -61,8 +61,8 @@ Reveals kernel stack usage and function call chain for debugging.
 
 This project contains 10 modules: 5 Operating System modules and 5 Computer Architecture modules.
 ## Module Architecture Diagram
-```
-mermaid
+
+```mermaid
 flowchart TD
     A[Customized xv6] --> B[Operating System]
     A --> C[Computer Architecture]
