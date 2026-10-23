@@ -1,4 +1,4 @@
-# Customized xv6-riscv Kernel
+hi# Customized xv6-riscv Kernel
 
 > Operating System + Architecture Project proposal
 > 
@@ -78,4 +78,12 @@ flowchart TD
     C --> C5[10. Stack Inspector]
     B1 & B2 & B3 & B4 & B5 & C1 & C2 & C3 & C4 & C5 --> D[Core xv6 Kernel]
 ```
-## **Branch: riscv | File: final.c | All 10 Modules Integrated & Tested**
+## Branch & File Info
+- **Branch:** `riscv`
+- **Main File:** `final.c`
+- **Status:** All 10 Modules Integrated & Tested
+
+## How to Run
+```bash
+git checkout riscv
+make qemu
