@@ -15,7 +15,7 @@ flowchart TD
     I --> J[Module 10: Stack Inspector]
     J --> K[FINAL: All 10 Integrated final.c]
 
-
+Overview of 10 Modules
 ## Part A: OS Modules
 
 *Module 1: Custom Banner*
