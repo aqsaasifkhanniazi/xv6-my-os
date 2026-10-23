@@ -165,3 +165,11 @@ sys_misa(void)
   asm volatile("csrr %0, satp" : "=r" (x));
   return x;
 }
+uint64
+sys_scratch(void)
+{
+  uint64 x;
+  asm volatile("csrr %0, sscratch" : "=r" (x));
+  return x;
+}
+

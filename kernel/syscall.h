@@ -34,3 +34,4 @@
 #define SYS_rdinstret 33
 #define SYS_rdtime 34
 #define SYS_misa  35
+#define SYS_scratch  36

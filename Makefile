@@ -168,7 +168,8 @@ $U/_proccount\
 	$U/_cycle\
 	$U/_inscount\
 	$U/_timestat\
-        $U/_isaext\
+         $U/_isaext\
+	$U/_stackinfo\
 
 fs.img: mkfs/mkfs fs.img README $(UPROGS)
 	mkfs/mkfs fs.img README $(UPROGS)
