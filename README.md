@@ -1,15 +1,16 @@
-# xv6-my-os - Custom OS by Aqsa
+# xv6-my-os - Custom OS by Aqsa Asif Khan Niazi
 
 ## OS Module Architecture - 10 Modules Integrated
 
-- Module 1: Custom Banner
-- Module 2: proccount working
-- Module 3: hello getppid proccount
-- Module 4: meminfo Physical Memory
-- Module 5: diskinfo OS Final
-- Module 6: rdcycle RISC-V cycle
-- Module 7: rdinstret instruction counter
-- Module 8: CUSTOM rdtime time CSR
-- Module 9: SATP Reader Sv39
-- Module 10: Stack Inspector sscratch+sp+fp+ra
-- FINAL: All 10 Integrated final.c
+```mermaid
+flowchart TD
+    A[Module 1: Custom Banner] --> B[Module 2: proccount working]
+    B --> C[Module 3: hello getppid proccount]
+    C --> D[Module 4: meminfo Physical Memory]
+    D --> E[Module 5: diskinfo OS Final]
+    E --> F[Module 6: rdcycle RISC-V cycle]
+    F --> G[Module 7: rdinstret instruction counter]
+    G --> H[Module 8: CUSTOM rdtime time CSR]
+    H --> I[Module 9: SATP Reader Sv39]
+    I --> J[Module 10: Stack Inspector]
+    J --> K[FINAL: All 10 Integrated final.c]
