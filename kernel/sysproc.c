@@ -97,7 +97,13 @@ sys_kill(void)
   argint(0, &pid);
   return kkill(pid);
 }
-
+uint64
+sys_rdtime(void)
+{
+  uint64 x;
+  asm volatile("csrr %0, time" : "=r" (x));
+  return x;
+}
 // return how many clock tick interrupts have occurred
 // since start.
 uint64

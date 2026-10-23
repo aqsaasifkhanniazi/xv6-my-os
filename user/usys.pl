@@ -51,3 +51,4 @@ entry("freeblocks");
 entry("usedblocks");
 entry("rdcycle");
 entry("rdinstret");
+entry("rdtime");

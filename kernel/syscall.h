@@ -32,3 +32,4 @@
 #define SYS_pagetable  31
 #define SYS_rdcycle    32
 #define SYS_rdinstret 33
+#define SYS_rdtime 34

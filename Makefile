@@ -167,6 +167,7 @@ $U/_proccount\
 	$U/_getppid\
 	$U/_cycle\
 	$U/_inscount\
+	$U/_timestat\
 
 fs.img: mkfs/mkfs fs.img README $(UPROGS)
 	mkfs/mkfs fs.img README $(UPROGS)
