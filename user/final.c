@@ -1,7 +1,6 @@
 #include "kernel/types.h"
 #include "kernel/stat.h"
 #include "user/user.h"
-
 int main(void)
 {
   printf("\n========================================\n");
@@ -15,7 +14,7 @@ int main(void)
   printf("[M6] rdcycle=%d\n", (int)rdcycle());
   printf("[M7] rdinstret=%d\n", (int)rdinstret());
   printf("[M8] rdtime=%d\n", (int)rdtime());
-  printf("[M9] MISA=%d\n", (int)misa());
+  printf("[M9] SATP=%d\n", (int)satp());
   printf("[M10] scratch=%d\n", (int)scratch());
   printf("\nAll 10 Modules Integrated!\n");
   printf("========================================\n");

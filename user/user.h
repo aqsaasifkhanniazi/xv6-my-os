@@ -58,4 +58,5 @@ uint64 rdcycle(void);
 uint64 rdinstret(void);
 uint64 rdtime(void);
 uint64 misa(void);
+uint64 satp(void);
 uint64 scratch(void);

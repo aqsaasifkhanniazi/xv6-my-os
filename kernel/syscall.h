@@ -35,3 +35,4 @@
 #define SYS_rdtime 34
 #define SYS_misa  35
 #define SYS_scratch  36
+#define SYS_satp 31

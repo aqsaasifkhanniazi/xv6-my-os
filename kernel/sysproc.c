@@ -173,3 +173,9 @@ sys_scratch(void)
   return x;
 }
 
+
+uint64
+sys_satp(void)
+{
+  return r_satp();
+}

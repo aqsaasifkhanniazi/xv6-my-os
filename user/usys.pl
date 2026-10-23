@@ -54,3 +54,4 @@ entry("rdinstret");
 entry("rdtime");
 entry("misa");
 entry("scratch");
+entry("satp");
