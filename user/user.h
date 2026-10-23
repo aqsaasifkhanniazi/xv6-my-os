@@ -57,3 +57,4 @@ uint64 usedblocks(void);
 uint64 rdcycle(void);
 uint64 rdinstret(void);
 uint64 rdtime(void);
+uint64 misa(void);

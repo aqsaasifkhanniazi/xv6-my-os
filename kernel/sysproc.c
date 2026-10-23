@@ -158,3 +158,10 @@ sys_rdinstret(void)
   asm volatile("rdinstret %0" : "=r" (x));
   return x;
 }
+uint64
+sys_misa(void)
+{
+  uint64 x;
+  asm volatile("csrr %0, satp" : "=r" (x));
+  return x;
+}

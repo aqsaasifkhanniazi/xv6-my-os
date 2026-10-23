@@ -33,3 +33,4 @@
 #define SYS_rdcycle    32
 #define SYS_rdinstret 33
 #define SYS_rdtime 34
+#define SYS_misa  35

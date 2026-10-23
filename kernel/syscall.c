@@ -114,6 +114,7 @@ extern uint64 sys_rdinstret(void);
 extern uint64 sys_rdcycle(void);
 
 extern uint64 sys_rdtime(void);
+extern uint64 sys_misa(void);
 // An array mapping syscall numbers from syscall.h
 // to the function that handles the system call.
 static uint64 (*syscalls[])(void) = {
@@ -149,6 +150,8 @@ static uint64 (*syscalls[])(void) = {
   [SYS_rdinstret] sys_rdinstret,
    [SYS_rdcycle] sys_rdcycle,
 [SYS_rdtime] sys_rdtime,
+[SYS_misa]    sys_misa,
+
   // clang-format on
 };
 
