@@ -4,35 +4,58 @@ This project contains 10 modules: 5 Operating System modules and 5 Computer Arch
 
 ## Module Architecture Diagram
 
-![Module Architecture](diagram.png)
-
+```mermaid
+flowchart TD
+    A[Customized xv6] --> B[Operating System]
+    A --> C[Computer Architecture]
+    B --> B1[01. Custom Banner]
+    B --> B2[02. proccount]
+    B --> B3[03. hello getppid proccount]
+    B --> B4[04. meminfo]
+    B --> B5[05. diskinfo]
+    C --> C1[06. rdcycle]
+    C --> C2[07. rdinstret]
+    C --> C3[08. CUSTOM rdtime]
+    C --> C4[09. SATP Reader]
+    C --> C5[10. Stack Inspector]
+    B1 & B2 & B3 & B4 & B5 & C1 & C2 & C3 & C4 & C5 --> D[Core xv6 Kernel]
+```
 ## Project Overview
 
-This project extends the MIT xv6-riscv teaching operating system with 10 educational modules. The modules are integrated into the Core xv6 Kernel.
+This project extends the MIT xv6-riscv teaching operating system with 10 educational modules. All modules are integrated into final.c on riscv branch.
 
-### Part A: OS Modules (5 Modules)
+### Part A: OS Modules
 
-**Module 1: Custom Banner** - Custom kernel banner showing OS name and student info at boot. Implemented in main.c.
+*01. Custom Banner* 
+Shows OS name and Aqsa Asif Khan Niazi at boot. Implemented in kernel/main.c.
 
-**Module 2: proccount** - Counts active processes from process table. Returns total process count.
+*02. proccount*
+Counts total active processes from process table. Returns count to user space.
 
-**Module 3: hello, getppid, proccount** - Three syscalls combined. Greeting, parent PID, and process count.
+*03. hello, getppid, proccount*
+Three syscalls in one program. Greeting, parent PID and total processes.
 
-**Module 4: meminfo** - Shows total, free and used physical memory. Reads from kalloc.c.
+*04. meminfo*
+Displays total, free and used physical memory. Reads info from kalloc.c.
 
-**Module 5: diskinfo** - Shows disk size and free blocks. Final OS module for storage info.
+*05. diskinfo*
+Displays disk size, used and free blocks. Final OS module for storage.
 
-### Part B: Architecture Modules (5 Modules)
+### Part B: Architecture Modules
 
-**Module 6: rdcycle** - Reads RISC-V cycle CSR for performance measurement. Uses assembly.
+*06. rdcycle*
+Reads RISC-V cycle CSR using assembly. Measures CPU cycles for performance.
 
-**Module 7: rdinstret** - Reads instruction counter CSR. For CPI analysis.
+*07. rdinstret*
+Reads instruction retired CSR. Counts total instructions for CPI analysis.
 
-**Module 8: CUSTOM rdtime** - Custom time CSR implementation. Unique logic, not standard CSRs.
+*08. CUSTOM rdtime*
+Custom time CSR reader with unique logic. Different from sstatus, sepc, stvec.
 
-**Module 9: SATP Reader** - Reads SATP for Sv39 paging. Shows virtual memory layout.
+*09. SATP Reader*
+Reads SATP register for Sv39 paging. Shows root page table and ASID.
 
-**Module 10: Stack Inspector** - Inspects stack registers sp, fp, ra. Shows trap frame.
+*10. Stack Inspector*
+Inspects stack registers sp, fp, ra, gp. Shows trap frame and stack layout.
 
-**Branch: riscv | File: final.c | All 10 Modules Integrated**
-```
+*Branch: riscv | File: final.c | All 10 Modules Integrated - Verified*
